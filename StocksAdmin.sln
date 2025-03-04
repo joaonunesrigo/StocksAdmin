@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksAdmin.Api", "StocksAdmin.Api/StocksAdmin.Api.csproj", "{D1428C0A-8B6B-42B7-99FC-5377A93293D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksAdmin.Communication", "StocksAdmin.Communication/StocksAdmin.Communication.csproj", "{ADCEE9B4-428C-491A-B269-95BBEAABC55A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1428C0A-8B6B-42B7-99FC-5377A93293D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1428C0A-8B6B-42B7-99FC-5377A93293D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1428C0A-8B6B-42B7-99FC-5377A93293D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1428C0A-8B6B-42B7-99FC-5377A93293D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCEE9B4-428C-491A-B269-95BBEAABC55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCEE9B4-428C-491A-B269-95BBEAABC55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCEE9B4-428C-491A-B269-95BBEAABC55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCEE9B4-428C-491A-B269-95BBEAABC55A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {855B1650-1F39-4CC4-A939-C8C944E180E9}
+	EndGlobalSection
+EndGlobal
