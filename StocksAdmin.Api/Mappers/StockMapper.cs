@@ -1,7 +1,7 @@
-﻿using ProjectClientHub.Communication.Responses.Stocks;
-using ProjectClientHub.Entities;
+﻿using StocksAdmin.Api.Entities;
+using StocksAdmin.Communication.Responses.Stocks;
 
-namespace ProductClientHub.Api.Mappers
+namespace StocksAdmin.Api.Mappers
 {
     public class StockMapper
     {

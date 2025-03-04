@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace ProductClientHub.Api.Migrations
+namespace StocksAdmin.Api.Migrations
 {
     /// <inheritdoc />
     public partial class add_users_table_v2 : Migration

@@ -1,12 +1,12 @@
-﻿using ProductClientHub.Api.DataBase;
-using ProductClientHub.Api.Mappers;
-using ProductClientHub.Api.Services.ExternalApiService;
-using ProductClientHub.Api.Services.Wallet;
-using ProjectClientHub.Communication.Requests.Stock;
-using ProjectClientHub.Communication.Responses.Stocks;
-using ProjectClientHub.Entities;
+﻿using StocksAdmin.Api.DataBase;
+using StocksAdmin.Api.Mappers;
+using StocksAdmin.Api.Services.ExternalApiService;
+using StocksAdmin.Api.Services.Wallet;
+using StocksAdmin.Communication.Requests.Stock;
+using StocksAdmin.Communication.Responses.Stocks;
+using StocksAdmin.Api.Entities;
 
-namespace ProductClientHub.Api.Services.Stocks
+namespace StocksAdmin.Api.Services.Stocks
 {
     public class StockService
     {

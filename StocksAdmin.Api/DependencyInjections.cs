@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using ProductClientHub.Api.DataBase;
-using ProductClientHub.Api.Services.ExternalApiService;
-using ProductClientHub.Api.Services.Stocks;
-using ProductClientHub.Api.Services.User;
-using ProductClientHub.Api.Services.Wallet;
-using ProductClientHub.Api.Tasks;
+using StocksAdmin.Api.DataBase;
+using StocksAdmin.Api.Services.ExternalApiService;
+using StocksAdmin.Api.Services.Stocks;
+using StocksAdmin.Api.Services.User;
+using StocksAdmin.Api.Services.Wallet;
+using StocksAdmin.Api.Tasks;
 
-namespace ProductClientHub.Api
+namespace StocksAdmin.Api
 {
     public static class DependencyInjections
     {

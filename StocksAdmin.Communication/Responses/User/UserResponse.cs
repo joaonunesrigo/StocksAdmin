@@ -1,4 +1,4 @@
-﻿namespace ProjectClientHub.Communication.Responses.Users
+﻿namespace StocksAdmin.Communication.Responses.Users
 {
     public class UserResponse
     {

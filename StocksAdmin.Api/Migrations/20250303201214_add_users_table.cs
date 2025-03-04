@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProductClientHub.Api.Migrations
+namespace StocksAdmin.Api.Migrations
 {
     /// <inheritdoc />
     public partial class add_users_table : Migration

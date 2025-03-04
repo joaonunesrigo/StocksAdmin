@@ -1,10 +1,10 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using ProjectClientHub.Communication.Requests.User;
+using StocksAdmin.Communication.Requests.User;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace ProductClientHub.Api.Services.User
+namespace StocksAdmin.Api.Services.User
 {
     public class JwtTokenService
     {

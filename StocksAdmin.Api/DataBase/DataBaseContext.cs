@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductClientHub.Api.Entities;
-using ProjectClientHub.Entities;
+using StocksAdmin.Api.Entities;
 
-namespace ProductClientHub.Api.DataBase
+namespace StocksAdmin.Api.DataBase
 {
     public class DataBaseContext : DbContext
     {

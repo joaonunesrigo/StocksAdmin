@@ -1,8 +1,7 @@
-﻿using ProductClientHub.Api.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProjectClientHub.Entities
+namespace StocksAdmin.Api.Entities
 {
     [Table("stocks")]
     public class Stock

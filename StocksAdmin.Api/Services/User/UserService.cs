@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductClientHub.Api.DataBase;
-using ProjectClientHub.Communication.Requests.User;
-using ProjectClientHub.Communication.Responses.Users;
+using StocksAdmin.Api.DataBase;
+using StocksAdmin.Communication.Requests.User;
+using StocksAdmin.Communication.Responses.Users;
 
-namespace ProductClientHub.Api.Services.User
+namespace StocksAdmin.Api.Services.User
 {
     public class UserService
     {

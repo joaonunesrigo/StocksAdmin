@@ -1,7 +1,7 @@
-﻿using ProjectClientHub.Communication.Responses.Stocks;
+﻿using StocksAdmin.Communication.Responses.Stocks;
 using System.Text.Json;
 
-namespace ProductClientHub.Api.Services.ExternalApiService
+namespace StocksAdmin.Api.Services.ExternalApiService
 {
     public class AssetService
     {

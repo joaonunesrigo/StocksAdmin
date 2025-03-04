@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProjectClientHub.Communication.Requests.Wallet
+namespace StocksAdmin.Communication.Requests.Wallet
 {
     public record WalletRequest
     {

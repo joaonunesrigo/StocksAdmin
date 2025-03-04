@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProjectClientHub.Communication.Requests.Stock
+namespace StocksAdmin.Communication.Requests.Stock
 {
     public record UpdateStockRequest
     {

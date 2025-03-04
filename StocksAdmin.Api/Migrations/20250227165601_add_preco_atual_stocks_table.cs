@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProductClientHub.Api.Migrations
+namespace StocksAdmin.Api.Migrations
 {
     /// <inheritdoc />
     public partial class add_preco_atual_stocks_table : Migration

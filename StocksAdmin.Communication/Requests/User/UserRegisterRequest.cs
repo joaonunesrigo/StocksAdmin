@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProjectClientHub.Communication.Requests.User
+namespace StocksAdmin.Communication.Requests.User
 {
     public class UserRegisterRequest
     {

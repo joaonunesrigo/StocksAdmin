@@ -1,9 +1,9 @@
-﻿using ProductClientHub.Api.DataBase;
-using ProductClientHub.Api.Mappers;
-using ProjectClientHub.Communication.Requests.Wallet;
-using ProjectClientHub.Communication.Responses.Wallets;
+﻿using StocksAdmin.Api.DataBase;
+using StocksAdmin.Api.Mappers;
+using StocksAdmin.Communication.Requests.Wallet;
+using StocksAdmin.Communication.Responses.Wallets;
 
-namespace ProductClientHub.Api.Services.Wallet
+namespace StocksAdmin.Api.Services.Wallet
 {
     public class WalletService
     {

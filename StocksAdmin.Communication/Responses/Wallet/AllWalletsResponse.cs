@@ -1,4 +1,4 @@
-﻿namespace ProjectClientHub.Communication.Responses.Wallets
+﻿namespace StocksAdmin.Communication.Responses.Wallets
 {
     public record AllWalletsResponse
     {

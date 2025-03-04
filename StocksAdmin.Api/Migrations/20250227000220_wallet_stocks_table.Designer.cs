@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ProductClientHub.Api.DataBase;
+using StocksAdmin.Api.DataBase;
 
 #nullable disable
 
-namespace ProductClientHub.Api.Migrations
+namespace StocksAdmin.Api.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
     [Migration("20250227000220_wallet_stocks_table")]

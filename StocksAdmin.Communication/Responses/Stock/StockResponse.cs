@@ -1,4 +1,4 @@
-﻿namespace ProjectClientHub.Communication.Responses.Stocks
+﻿namespace StocksAdmin.Communication.Responses.Stocks
 {
     public record StockResponse
     {

@@ -1,7 +1,7 @@
-﻿using ProductClientHub.Api.DataBase;
-using ProductClientHub.Api.Services.ExternalApiService;
+﻿using StocksAdmin.Api.DataBase;
+using StocksAdmin.Api.Services.ExternalApiService;
 
-namespace ProductClientHub.Api.Tasks
+namespace StocksAdmin.Api.Tasks
 {
     public class AtualizaPrecoAtivosTask : IHostedService, IDisposable
     {

@@ -1,4 +1,4 @@
-using ProductClientHub.Api;
+using StocksAdmin.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 

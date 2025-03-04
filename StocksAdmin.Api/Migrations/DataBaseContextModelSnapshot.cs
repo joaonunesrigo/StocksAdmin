@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ProductClientHub.Api.DataBase;
+using StocksAdmin.Api.DataBase;
 
 #nullable disable
 
-namespace ProductClientHub.Api.Migrations
+namespace StocksAdmin.Api.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
     partial class DataBaseContextModelSnapshot : ModelSnapshot

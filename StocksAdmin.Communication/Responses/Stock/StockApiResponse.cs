@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ProjectClientHub.Communication.Responses.Stocks
+namespace StocksAdmin.Communication.Responses.Stocks
 {
     public class StockApiResponse
     {

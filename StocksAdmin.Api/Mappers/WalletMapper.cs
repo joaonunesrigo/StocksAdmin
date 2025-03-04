@@ -1,7 +1,7 @@
-﻿using ProductClientHub.Api.Entities;
-using ProjectClientHub.Communication.Responses.Wallets;
+﻿using StocksAdmin.Api.Entities;
+using StocksAdmin.Communication.Responses.Wallets;
 
-namespace ProductClientHub.Api.Mappers
+namespace StocksAdmin.Api.Mappers
 {
     public class WalletMapper
     {

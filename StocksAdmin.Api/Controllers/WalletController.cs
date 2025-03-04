@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductClientHub.Api.Services.Wallet;
-using ProjectClientHub.Communication.Requests.Wallet;
-using ProjectClientHub.Communication.Responses.Wallets;
+using StocksAdmin.Api.Services.Wallet;
+using StocksAdmin.Communication.Requests.Wallet;
+using StocksAdmin.Communication.Responses.Wallets;
 
-namespace ProductClientHub.Api.Controllers
+namespace StocksAdmin.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

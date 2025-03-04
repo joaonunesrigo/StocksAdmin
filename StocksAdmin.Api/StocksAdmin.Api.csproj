@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProjectClientHub.Communication\StocksAdmin.Communication.csproj" />
+    <ProjectReference Include="..\StocksAdmin.Communication\StocksAdmin.Communication.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductClientHub.Api.Services.User;
-using ProjectClientHub.Communication.Requests.User;
+using StocksAdmin.Api.Services.User;
+using StocksAdmin.Communication.Requests.User;
 
-namespace ProductClientHub.Api.Controllers
+namespace StocksAdmin.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
