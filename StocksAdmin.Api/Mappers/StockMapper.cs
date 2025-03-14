@@ -11,6 +11,9 @@ namespace StocksAdmin.Api.Mappers
             {
                 Id = stock.Id,
                 Nome = stock.Nome,
+                Codigo = stock.Codigo,
+                Quantidade = stock.Quantidade,
+                PrecoAtual = stock.CurrentPrice,
             };
         }
 

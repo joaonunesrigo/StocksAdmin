@@ -2,6 +2,7 @@
 using StocksAdmin.Api.DataBase;
 using StocksAdmin.Communication.Requests.User;
 using StocksAdmin.Communication.Responses.Users;
+using Claims = System.Security.Claims;
 
 namespace StocksAdmin.Api.Services.User
 {
@@ -40,23 +41,23 @@ namespace StocksAdmin.Api.Services.User
             };
         }
 
-        public bool ValidateLogin(UserLoginRequest userLoginRequest)
+        public long ValidateLogin(UserLoginRequest userLoginRequest)
         {
             var user = _dbContext.Users.FirstOrDefault(u => u.Email == userLoginRequest.Email);
 
             if (user == null)
             {
-                return false;
+                return 0;
             }
 
             var userRequestPasswordHash = GenerateHashPassword(userLoginRequest.Password);
 
             if (userRequestPasswordHash.Equals(user.Password))
             {
-                return true;
+                return user.Id;
             }
 
-            return false;
+            return 0;
         }
 
         public string GenerateHashPassword(string password)
@@ -64,6 +65,24 @@ namespace StocksAdmin.Api.Services.User
             var bytes = System.Text.Encoding.UTF8.GetBytes(password);
             var hash = System.Security.Cryptography.SHA256.HashData(bytes);
             return Convert.ToBase64String(hash);
+        }
+
+        public Entities.User GetUserById(long userId)
+        {
+            var user = _dbContext.Users.FirstOrDefault(u => u.Id == userId);
+            return user;
+        }
+
+        public long GetIdUserAuthenticated(Claims.ClaimsPrincipal user)
+        {
+            var userId = Convert.ToInt64(user.FindFirst(Claims.ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userId == 0)
+            {
+                throw new Exception("Não foi possível achar o ID do usuário logado");
+            }
+
+            return userId;
         }
     }
 }

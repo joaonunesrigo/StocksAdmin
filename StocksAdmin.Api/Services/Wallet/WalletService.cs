@@ -14,10 +14,11 @@ namespace StocksAdmin.Api.Services.Wallet
             _dbContext = dbContext;
         }
 
-        public WalletResponse CreateWallet(WalletRequest walletRequest)
+        public WalletResponse CreateWallet(WalletRequest walletRequest, long userId)
         {
             var walletEntity = new Entities.Wallet
             {
+                UserId = userId,
                 Name = walletRequest.Nome,
             };
 
@@ -32,16 +33,20 @@ namespace StocksAdmin.Api.Services.Wallet
             };
         }
 
-        public AllWalletsResponse GetAllUserWallets()
+        public AllWalletsResponse GetAllUserWallets(long userId)
         {
-            var wallets = _dbContext.Wallets.ToList();
+            var wallets = _dbContext.Wallets
+                .Where(w => w.UserId == userId)
+                .ToList();
+
             var walletResponses = WalletMapper.ToResponseList(wallets);
 
-            return new AllWalletsResponse()
+            return new AllWalletsResponse
             {
                 Wallets = walletResponses
             };
         }
+
 
         public WalletResponse UpdateWallet(long id, WalletRequest walletRequest)
         {

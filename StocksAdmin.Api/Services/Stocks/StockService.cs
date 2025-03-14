@@ -1,10 +1,10 @@
 ﻿using StocksAdmin.Api.DataBase;
+using StocksAdmin.Api.Entities;
 using StocksAdmin.Api.Mappers;
 using StocksAdmin.Api.Services.ExternalApiService;
 using StocksAdmin.Api.Services.Wallet;
 using StocksAdmin.Communication.Requests.Stock;
 using StocksAdmin.Communication.Responses.Stocks;
-using StocksAdmin.Api.Entities;
 
 namespace StocksAdmin.Api.Services.Stocks
 {
@@ -49,7 +49,10 @@ namespace StocksAdmin.Api.Services.Stocks
             return new StockResponse
             {
                 Id = stockEntity.Id,
-                Nome = stockEntity.Nome
+                Nome = stockEntity.Nome,
+                Codigo = stockEntity.Codigo,
+                Quantidade = stockEntity.Quantidade,
+                PrecoAtual = stockEntity.CurrentPrice
             };
         }
 
@@ -70,9 +73,9 @@ namespace StocksAdmin.Api.Services.Stocks
 
             return stockResponse;
         }
-        public AllStocksResponse GetAllStocks()
+        public AllStocksResponse GetAllUserWalletStocks(long walletId)
         {
-            var stocks = _dbContext.Stocks.ToList();
+            var stocks = _dbContext.Stocks.Where(s => s.WalletId == walletId).ToList();
             var stockResponse = StockMapper.ToResponseList(stocks);
 
             return new AllStocksResponse()
@@ -80,5 +83,6 @@ namespace StocksAdmin.Api.Services.Stocks
                 Stocks = stockResponse
             };
         }
+
     }
 }

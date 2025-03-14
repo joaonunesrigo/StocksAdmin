@@ -24,19 +24,23 @@ namespace StocksAdmin.Api.Controllers
                 return BadRequest("Credenciais são obrigatórias.");
             }
 
-            bool isValidUser = _userService.ValidateLogin(userLoginRequest);
+            long userId = _userService.ValidateLogin(userLoginRequest);
 
-            if (!isValidUser)
+            if (userId == 0)
             {
                 return Unauthorized("Credenciais inválidas.");
             }
 
-            var token = JwtTokenService.GenerateToken(userLoginRequest);
+            var user = _userService.GetUserById(userId);
+            if (user == null)
+            {
+                return Unauthorized("Usuário não encontrado.");
+            }
 
-            return Ok(new { Token = token });
+            var token = JwtTokenService.GenerateToken(userLoginRequest.Email, userId);
+
+            return Ok(new { Token = token, UserId = userId });
         }
-
-
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegisterRequest userRegisterRequest)

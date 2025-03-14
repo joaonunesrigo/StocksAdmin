@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using StocksAdmin.Api.Services.Stocks;
 using StocksAdmin.Communication.Requests.Stock;
 using StocksAdmin.Communication.Responses.Stocks;
@@ -7,6 +8,7 @@ namespace StocksAdmin.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StocksController : ControllerBase
     {
         private readonly StockService _stockService;
@@ -47,20 +49,12 @@ namespace StocksAdmin.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        [Route("{walletId}")]
+        public IActionResult GetAllByWalletId(long walletId)
         {
-            var response = _stockService.GetAllStocks();
-
-            if (response.Stocks.Count == 0) return NoContent();
+            var response = _stockService.GetAllUserWalletStocks(walletId);
 
             return Ok(response);
-        }
-
-        [HttpGet]
-        [Route("{id}")]
-        public IActionResult GetById([FromRoute] Guid id)
-        {
-            return Ok();
         }
 
         [HttpDelete]

@@ -1,5 +1,4 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using StocksAdmin.Communication.Requests.User;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -8,7 +7,7 @@ namespace StocksAdmin.Api.Services.User
 {
     public class JwtTokenService
     {
-        public static string GenerateToken(UserLoginRequest userLoginRequest)
+        public static string GenerateToken(string email, long userId)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(ExternalApiConfig.SecretJWT);
@@ -17,7 +16,7 @@ namespace StocksAdmin.Api.Services.User
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 SigningCredentials = credentials,
-                Subject = GenerateClaimsIdentity(userLoginRequest),
+                Subject = GenerateClaimsIdentity(email, userId),
                 Expires = DateTime.UtcNow.AddHours(2)
             };
 
@@ -25,11 +24,17 @@ namespace StocksAdmin.Api.Services.User
             return tokenHandler.WriteToken(token);
         }
 
-        private static ClaimsIdentity GenerateClaimsIdentity(UserLoginRequest userLoginRequest)
+        private static ClaimsIdentity GenerateClaimsIdentity(string email, long userId)
         {
             var ci = new ClaimsIdentity();
-            ci.AddClaim(new Claim(ClaimTypes.Email, userLoginRequest.Email));
+            ci.AddClaim(new Claim(ClaimTypes.Email, email));
+            ci.AddClaim(new Claim(ClaimTypes.NameIdentifier, userId.ToString()));
             return ci;
+        }
+
+        public long GetUserIdFromClaims(ClaimsPrincipal user)
+        {
+            return long.Parse(user.FindFirst("sub")?.Value ?? "0");
         }
     }
 }
